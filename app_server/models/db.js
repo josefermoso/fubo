@@ -3,6 +3,8 @@ var gracefulShutdown;
 var dbURI = 'mongodb://localhost/Fubo';
 mongoose.connect(dbURI);
 
+require('./users');
+
 mongoose.connection.on('connected', function () {
     console.log('Mongoose connected to ' + dbURI);
 });
